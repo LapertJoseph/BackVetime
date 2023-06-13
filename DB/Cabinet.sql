@@ -11,4 +11,8 @@ CREATE OR REPLACE TABLE cabinet (
 INSERT INTO cabinet (ville, cp , latitude, longitude) VALUES ("VilleJuif", 94800, 48.789390100000006, 2.363719169294484);
 INSERT INTO cabinet (ville, cp , latitude, longitude) VALUES ("Gonesse", 95500, 48.98609, 2.447993);
 
+ALTER TABLE cabinet 
+ADD idUser int(3) NOT NULL;
 
+ALTER TABLE cabinet
+ADD CONSTRAINT `fk_idUser` FOREIGN KEY (idUser) REFERENCES utilisateur(idUser);
