@@ -12,7 +12,7 @@ CREATE OR REPLACE PROCEDURE login(
     IN p_passwordUser varchar(128)
 )
 BEGIN
-    SELECT emailUser , passwordUser 
+    SELECT emailUser , passwordUser, isVeto
     FROM utilisateur
     WHERE emailUser = p_emailUser AND `passwordUser` = p_passwordUser; 
 END //
