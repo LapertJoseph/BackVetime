@@ -3,8 +3,8 @@
  */
 
 const express = require('express');
-const getRdv = require('../controllers/rdv/getRdv');
 const router = express.Router();
+const getRdv = require('../controllers/rdv/getRdv');
 
 router.get('/rdv', getRdv)
 

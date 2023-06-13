@@ -16,3 +16,15 @@ ADD idUser int(3) NOT NULL;
 
 ALTER TABLE cabinet
 ADD CONSTRAINT `fk_idUser` FOREIGN KEY (idUser) REFERENCES utilisateur(idUser);
+
+ALTER TABLE cabinet ADD nomCabinet VARCHAR(100);
+ALTER TABLE cabinet ADD adresse VARCHAR(100);
+ALTER TABLE cabinet ADD telCabinet INT(10);
+
+UPDATE cabinet SET nomCabinet = "ToutouMinou" WHERE cabinet_id = 1;
+UPDATE cabinet SET adresse = "22 rue de paris" WHERE cabinet_id = 1; 
+UPDATE cabinet SET telCabinet = 0123456789 WHERE cabinet_id = 1;
+
+UPDATE cabinet SET nomCabinet = "FlairTout" WHERE cabinet_id = 2;
+UPDATE cabinet SET adresse = "13 rue du General de Gaulle" WHERE cabinet_id = 2; 
+UPDATE cabinet SET telCabinet = 0213456789 WHERE cabinet_id = 2;
