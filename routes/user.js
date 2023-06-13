@@ -11,7 +11,7 @@ const postUser = require('../controllers/user/postUser');
 const router = express.Router();
 
 router.get('/user', getUser);
-router.post('/auth', login);
+router.get('/auth', login);
 
 router.post('/users', postUser);
 
