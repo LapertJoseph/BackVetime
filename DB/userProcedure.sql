@@ -7,7 +7,7 @@ BEGIN
 END //
 DELIMITER ;
 DELIMITER //
-CREATE OR REPLACE PROCEDURE login(
+CREATE OR REPLACE PROCEDURE `login`(
     IN p_emailUser varchar(50),
     IN p_passwordUser varchar(128)
 )
