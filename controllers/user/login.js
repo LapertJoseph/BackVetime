@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
         req.session.uid = data.id;
         req.session.email = data.email;
         console.log("data = ", data);
-        return res.status(200).json({ success: true, user: data})
+        return res.status(200).json({ success: true, user: data })
     } catch (error) {
         return res.status(400).json({ error: error.message });
     } finally {
