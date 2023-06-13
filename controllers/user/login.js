@@ -6,7 +6,7 @@ const pool = require('../../config/database');
 
 module.exports = async (req, res) => {
     let connection;
-    const { email, password } = req.params;
+    const { email, password } = req.body;
     console.log(email)
     try {
         connection = await pool.getConnection();
