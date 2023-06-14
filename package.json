@@ -8,7 +8,8 @@
     "dev": "nodemon app.js",
     "procUser": "mariadb -uroot -ppassword -h 127.0.0.1 vettime < ./DB/userProcedure.sql",
     "procRdv": "mariadb -uroot -ppassword -h 127.0.0.1 vettime < ./DB/rdvProcedure.sql",
-    "procCabinet": "mariadb -uroot -ppassword -h 127.0.0.1 vettime < ./DB/cabinetProcedure.sql"
+    "procCabinet": "mariadb -uroot -ppassword -h 127.0.0.1 vettime < ./DB/cabinetProcedure.sql",
+    "procCreneau": "mariadb -uroot -ppassword -h 127.0.0.1 vettime < ./DB/creneauProcedure.sql"
   },
   "author": "",
   "license": "ISC",
