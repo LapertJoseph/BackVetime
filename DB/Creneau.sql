@@ -19,3 +19,6 @@ ADD cabinet_id INT(3) NOT NULL;
 
 ALTER TABLE creneau
 ADD CONSTRAINT `fk_cabinet_id` FOREIGN KEY (cabinet_id) REFERENCES cabinet(cabinet_id);
+
+UPDATE creneau SET cabinet_id = 1 WHERE creneau_id = 1;
+UPDATE creneau SET cabinet_id = 2 WHERE creneau_id = 3;
