@@ -50,8 +50,15 @@ INSERT INTO `utilisateur` (`idUser`, `nomUser`, `prnmUser`, `emailUser`, `passwo
 --
 -- Index pour la table `utilisateur`
 --
+
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`idUser`);
+
+--
+-- alter table utilisateur pour set default idUser à 0
+--
+
+ALTER TABLE utilisateur MODIFY idUser INT(3) DEFAULT 0;
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -60,6 +67,7 @@ ALTER TABLE `utilisateur`
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
+
 ALTER TABLE `utilisateur`
   MODIFY `idUser` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;

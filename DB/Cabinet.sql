@@ -12,13 +12,15 @@ INSERT INTO cabinet (ville, cp , latitude, longitude) VALUES ("VilleJuif", 94800
 INSERT INTO cabinet (ville, cp , latitude, longitude) VALUES ("Gonesse", 95500, 48.98609, 2.447993);
 
 ALTER TABLE cabinet 
-ADD idUser int(3) NOT NULL;
+ADD idUser int(3) NOT NULL DEFAULT 0;
 
 ALTER TABLE cabinet
 ADD CONSTRAINT `fk_idUser` FOREIGN KEY (idUser) REFERENCES utilisateur(idUser);
 
-ALTER TABLE cabinet ADD nomCabinet VARCHAR(100);
+ALTER TABLE cabinet MODIFY idUser INT(3) DEFAULT 0;
+
 ALTER TABLE cabinet ADD adresse VARCHAR(100);
+ALTER TABLE cabinet ADD nomCabinet VARCHAR(100);
 ALTER TABLE cabinet ADD telCabinet INT(10);
 
 UPDATE cabinet SET nomCabinet = "ToutouMinou" WHERE cabinet_id = 1;
