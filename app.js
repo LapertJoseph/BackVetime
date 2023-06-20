@@ -1,7 +1,10 @@
 const express = require('express');
-const cors = require('cors');
 const app = express();
+const cors = require('cors');
+const verifyToken = require('./middleware/verifytoken');
 const session = require("express-session");
+const cookieParser = require("cookie-parser");
+
 
 const route = require('./routes')
 
@@ -9,6 +12,8 @@ const route = require('./routes')
 BigInt.prototype.toJSON = function () {
     return this.toString();
 };
+
+app.use(cookieParser());
 
 app.use(
     session({
@@ -21,9 +26,10 @@ app.use(
 
 app.use(cors());
 app.use(express.json());
+app.use(verifyToken);
 app.use(route)
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
     console.log(`server listening on port ${port}`);
