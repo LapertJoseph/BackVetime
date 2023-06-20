@@ -55,12 +55,6 @@ ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`idUser`);
 
 --
--- alter table utilisateur pour set default idUser à 0
---
-
-ALTER TABLE utilisateur MODIFY idUser INT(3) DEFAULT 0;
-
---
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -71,6 +65,17 @@ ALTER TABLE utilisateur MODIFY idUser INT(3) DEFAULT 0;
 ALTER TABLE `utilisateur`
   MODIFY `idUser` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
+
+
+ALTER TABLE utilisateur MODIFY nomUser varchar(20) NOT NULL;
+ALTER TABLE utilisateur MODIFY prnmUser varchar(20) NOT NULL;
+ALTER TABLE utilisateur MODIFY emailUser varchar(50) NOT NULL;
+ALTER TABLE utilisateur MODIFY passwordUser varchar(128) NOT NULL;
+ALTER TABLE utilisateur MODIFY adresseUser varchar(50) NOT NULL;
+ALTER TABLE utilisateur MODIFY villeUser varchar(50) NULL;
+ALTER TABLE utilisateur MODIFY CPUser INT(5) NULL;
+ALTER TABLE utilisateur MODIFY telUser CHAR(15) NULL;
+ALTER TABLE utilisateur MODIFY token VARCHAR(130) NULL;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

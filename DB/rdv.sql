@@ -61,4 +61,23 @@ COMMIT;
 ALTER TABLE `rdv` ADD idUser INT(3) NOT NULL;
 
 ALTER TABLE `rdv`
-ADD CONSTRAINT `fk_idUser_rdv` FOREIGN KEY (idUser) REFERENCES utilisateur(idUser); 
+ADD CONSTRAINT `fk_idUser_rdv` FOREIGN KEY (idUser) REFERENCES utilisateur(idUser);
+
+ALTER TABLE `rdv` ADD cabinet_id INT(3) NOT NULL;
+
+ALTER TABLE `rdv`
+ADD CONSTRAINT `fk_cabinet_id_rdv` FOREIGN KEY (cabinet_id) REFERENCES cabinet(cabinet_id);
+
+ALTER TABLE `rdv` ADD especeAnimal VARCHAR(50);
+
+ALTER TABLE `rdv`
+ADD CONSTRAINT `fk_espceAnimal_rdv` FOREIGN KEY (animal) REFERENCES animal(especeAnimal);
+
+ALTER TABLE `rdv` 
+MODIFY `timeslot` VARCHAR(255);
+
+ALTER TABLE `rdv` 
+MODIFY `nom` VARCHAR(255);
+
+ALTER TABLE `rdv` 
+MODIFY `email` VARCHAR(255);

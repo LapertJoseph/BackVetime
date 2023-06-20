@@ -6,10 +6,14 @@ const express = require('express');
 const router = express.Router()
 const { 
     postCabinet, 
-    getCabinet 
+    getCabinet,
+    getCabinetVille,
+    getCabinetRayon
 } = require('../controllers/cabinet');
 
 router.get('/cabinet', getCabinet)
-router.post('/cabinet', postCabinet)
+router.get('/cabinets', getCabinetVille)
+router.get('/cabinetRayon', getCabinetRayon)
+router.post('/cabinet/:id', postCabinet)
 
 module.exports = router;

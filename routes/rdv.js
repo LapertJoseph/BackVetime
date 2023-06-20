@@ -4,8 +4,9 @@
 
 const express = require('express');
 const router = express.Router();
-const getRdv = require('../controllers/rdv/getRdv');
+const { postRdv, getRdv } = require('../controllers/rdv');
 
 router.get('/rdv', getRdv)
+router.post('/rdv/:id', postRdv)
 
 module.exports = router;

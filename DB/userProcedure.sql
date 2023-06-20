@@ -6,17 +6,19 @@ BEGIN
     SELECT * FROM utilisateur;
 END //
 DELIMITER ;
+
 DELIMITER //
 CREATE OR REPLACE PROCEDURE `login`(
     IN p_emailUser varchar(50),
     IN p_passwordUser varchar(128)
 )
 BEGIN
-    SELECT emailUser , passwordUser, isVeto
+    SELECT emailUser , passwordUser, isVeto, idUser
     FROM utilisateur
     WHERE emailUser = p_emailUser AND `passwordUser` = p_passwordUser; 
 END //
 DELIMITER ;
+
 DELIMITER //
 CREATE OR REPLACE PROCEDURE add_user(
     IN p_nomUser VARCHAR(20),
@@ -27,7 +29,7 @@ CREATE OR REPLACE PROCEDURE add_user(
     IN p_isVeto TINYINT(1)
 )
 BEGIN
+    INSERT INTO utilisateur (nomUser, prnmUser, emailUser, passwordUser, adresseUser, isVeto)
     VALUES (p_nomUser, p_prnmUser, p_emailUser, SHA2(p_passwordUser, 512), p_adresseUser, p_isVeto);
-    SELECT LAST_INSERT_ID() as idUser;
 END //
 DELIMITER ;

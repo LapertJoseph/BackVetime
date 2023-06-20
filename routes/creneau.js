@@ -3,9 +3,10 @@
  */
 
 const express = require('express');
-const { getCreneauId } = require('../controllers/creneau');
+const { getCreneauId, getCreneauDate } = require('../controllers/creneau');
 const router = express.Router();
 
 router.get('/creneau/:id', getCreneauId);
+router.get('/creneau', getCreneauDate)
 
 module.exports = router;

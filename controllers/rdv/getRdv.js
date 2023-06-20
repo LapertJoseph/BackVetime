@@ -15,4 +15,4 @@ module.exports = async (req, res) => {
     } finally {
         if (connection) connection.end()
     }
-} 
+}
