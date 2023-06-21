@@ -28,3 +28,17 @@ BEGIN
 END //
 
 DELIMITER ;
+-- idCabinet, * from creneau idCabinet
+DELIMITER //
+
+CREATE OR REPLACE PROCEDURE post_creneau (
+    IN p_cabinet_id INT(10),
+    IN p_disponibilité TINYINT(1),
+    IN p_date_start DATETIME
+)
+BEGIN
+    INSERT INTO creneau (disponibilité, date_start, cabinet_id)
+    VALUES (p_disponibilité, p_date_start, p_cabinet_id);
+END //
+
+DELIMITER ;
