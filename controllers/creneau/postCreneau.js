@@ -7,10 +7,10 @@ const pool = require('../../config/database');
 module.exports = async (req, res) => {
     let connection;
     const { id } = req.params;
-    const { disponibilite, date } = req.body;
+    const { disponibilite, dateStart, dateEnd } = req.body;
     try {
         connection = await pool.getConnection();
-        const result = await connection.query('CALL post_creneau(?, ?, ?);', [id, disponibilite, date]);
+        const result = await connection.query('CALL post_creneau(?, ?, ?, ?);', [id, disponibilite, dateStart, dateEnd]);
         if(result.length === 0) {
             return res.status(401).json({error: error.message})
         }

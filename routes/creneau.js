@@ -6,12 +6,14 @@ const express = require('express');
 const { 
     getCreneauId, 
     getCreneauDate, 
-    postCreneau 
+    postCreneau, 
+    getCreneauOk
 } = require('../controllers/creneau');
 const router = express.Router();
 
 router.get('/creneau/:id', getCreneauId);
 router.get('/creneau', getCreneauDate)
+router.get('/creneauOk', getCreneauOk)
 
 router.post('/creneau/:id', postCreneau)
 
