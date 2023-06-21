@@ -11,7 +11,7 @@
 BackVetime requires [Node.js](https://nodejs.org/) v14+ to run. 
 
 ```sh
-    cd BackeVetime
+    cd BackVetime
     npm install
 ```
 
