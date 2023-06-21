@@ -13,7 +13,7 @@ const router = express.Router();
 
 router.get('/creneau/:id', getCreneauId);
 router.get('/creneau', getCreneauDate)
-router.get('/creneauOk', getCreneauOk)
+router.get('/creneauOk/:id', getCreneauOk)
 
 router.post('/creneau/:id', postCreneau)
 
