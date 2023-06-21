@@ -1,15 +1,37 @@
-# BACK Vettime
+# ✨ BACK Vettime ✨ #
+## This is the step to launch the server ##
 
-## This is the step to launch the server 
+#### Clone the project ####
+```sh
+    git clone https://github.com/LapertJoseph/BackVetime.git
+```
 
-# Clone the project
-1 - git clone https://github.com/LapertJoseph/BackVetime.git
+## Installation ##
+#### Install dependencies ####
+BackVetime requires [Node.js](https://nodejs.org/) v14+ to run. 
 
-# Install dependencies
-2 - `npm install`
+```sh
+    cd BackeVetime
+    npm install
+```
 
-# Launch DB + stored procedure
-3 - `npm run schema` after that `npm run procedure` to launch all stored procedure
+#### Launch DB + stored procedures ####
+```sh
+    npm run schema
+    npm run procedure
+``` 
 
-# Start the server
-4 - `npm run dev`
+#### Start the server ####
+```sh
+    npm run dev
+```
+
+## Tech
+
+Vettime uses a number of open source projects to work properly:
+
+- [REACTJS] - HTML enhanced for web apps!
+- [markdown-it] - Markdown parser done right. Fast and easy to 
+- [node.js] - evented I/O for the backend
+- [Express] - fast node.js network app framework [@tjholowaychuk]
+- [Breakdance](https://breakdance.github.io/breakdance/) - HTML to Markdown converter
