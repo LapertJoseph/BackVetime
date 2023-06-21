@@ -1,5 +1,5 @@
 # ✨ BACK Vettime ✨ #
-## This is the step to launch the server ##
+## This is the steps to launch the server ##
 
 #### Clone the project ####
 ```sh
