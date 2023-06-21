@@ -11,7 +11,7 @@
 BackVetime requires [Node.js](https://nodejs.org/) v14+ to run. 
 
 ```sh
-    cd BackVetime
+    cd BackeVetime
     npm install
 ```
 
@@ -30,8 +30,8 @@ BackVetime requires [Node.js](https://nodejs.org/) v14+ to run.
 
 Vettime uses a number of open source projects to work properly:
 
-- [REACTJS] - HTML enhanced for web apps!
-- [markdown-it] - Markdown parser done right. Fast and easy to 
-- [node.js] - evented I/O for the backend
-- [Express] - fast node.js network app framework [@tjholowaychuk]
+- [REACTJS](https://fr.legacy.reactjs.org/) - HTML enhanced for web apps!
+- [markdown-it](https://www.npmjs.com/package/markdown-it) - Markdown parser done right. Fast and easy to 
+- [node.js](https://nodejs.org/en) - evented I/O for the backend
+- [Express](https://expressjs.com/fr/) - fast node.js network app framework [@tjholowaychuk]
 - [Breakdance](https://breakdance.github.io/breakdance/) - HTML to Markdown converter
