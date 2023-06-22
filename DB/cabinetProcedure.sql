@@ -14,6 +14,17 @@ DELIMITER ;
 
 DELIMITER //
 
+CREATE OR REPLACE PROCEDURE get_cabinet_id (
+    IN p_cabinet_id  INT(3)
+)
+BEGIN
+    SELECT cabinet_id, ville, cp, latitude, longitude, adresse, telCabinet, nomCabinet, nomUser, prnmUser FROM cabinet
+    INNER JOIN utilisateur ON `cabinet`.`idUser` = `utilisateur`.`idUser`
+    WHERE cabinet_id = p_cabinet_id;
+END //
+
+DELIMITER //
+
 CREATE OR REPLACE PROCEDURE post_cabinet(
     IN p_idUser INT(3),
     IN p_ville VARCHAR(45),
