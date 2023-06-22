@@ -38,3 +38,8 @@ INSERT INTO creneau (disponibilité, date_start, date_end, cabinet_id) VALUES (1
 
 UPDATE creneau SET cabinet_id = 1 WHERE creneau_id = 1;
 UPDATE creneau SET cabinet_id = 2 WHERE creneau_id = 3;
+
+UPDATE creneau SET disponibilité = 0 WHERE creneau_id = 1;
+UPDATE creneau SET disponibilité = 0 WHERE creneau_id = 4;
+UPDATE creneau SET disponibilité = 0 WHERE creneau_id = 6;
+UPDATE creneau SET disponibilité = 0 WHERE creneau_id = 7;
