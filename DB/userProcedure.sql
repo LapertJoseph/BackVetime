@@ -34,3 +34,14 @@ BEGIN
     VALUES (p_nomUser, p_prnmUser, p_emailUser, SHA2(p_passwordUser, 512), p_adresseUser, p_isVeto);
 END //
 DELIMITER ;
+
+DELIMITER //
+
+CREATE OR REPLACE PROCEDURE get_user_email(
+    IN p_emailUser VARCHAR(50)
+)
+BEGIN
+    SELECT * FROM utilisateur
+    WHERE emailUser = p_emailUser;
+END //
+DELIMITER ;
