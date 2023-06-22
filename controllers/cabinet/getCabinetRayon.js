@@ -6,7 +6,10 @@ const pool = require('../../config/database');
 
 module.exports = async (req,  res) => {
     let connection;
-    const { latitude, longitude } = req.body;
+    console.log(req.query)
+    const latitude = req.query.latitude;
+    const longitude = req.query.longitude;
+    
     try {
         connection = await pool.getConnection();
         const data = await connection.query('CALL get_cabinet_rayon(?, ?);', [latitude, longitude]);
