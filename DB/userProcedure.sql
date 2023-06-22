@@ -15,7 +15,7 @@ CREATE OR REPLACE PROCEDURE `login`(
 BEGIN
     SELECT emailUser , passwordUser, isVeto, idUser
     FROM utilisateur
-    WHERE emailUser = p_emailUser AND `passwordUser` = p_passwordUser; 
+    WHERE emailUser = p_emailUser AND `passwordUser` = SHA2(p_passwordUser, 512); 
 END //
 DELIMITER ;
 

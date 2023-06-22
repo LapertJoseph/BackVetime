@@ -33,13 +33,12 @@ DELIMITER //
 
 CREATE OR REPLACE PROCEDURE post_creneau (
     IN p_cabinet_id INT(10),
-    IN p_disponibilité TINYINT(1),
     IN p_date_start DATETIME,
     IN p_date_end DATETIME
 )
 BEGIN
     INSERT INTO creneau (disponibilité, date_start, date_end, cabinet_id)
-    VALUES (p_disponibilité, p_date_start, p_date_end, p_cabinet_id);
+    VALUES (1, p_date_start, p_date_end, p_cabinet_id);
 END //
 
 DELIMITER ;
