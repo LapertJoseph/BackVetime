@@ -13,9 +13,9 @@ const getUserId = require('../controllers/user/getUserId');
 const router = express.Router();
 
 router.get('/user', getUser);
-router.get('/auth', login);
 router.get('/users/email/', getUserEmail)
 router.get('/user/:id', getUserId)
+router.get('/auth', login);
 
 router.post('/users', postUser);
 

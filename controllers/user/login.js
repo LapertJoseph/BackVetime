@@ -15,6 +15,7 @@ module.exports = async (req, res) => {
             return res.status(401).json({ success: false, data: "compte inconnu" });
         }
         const data = result[0][0]
+        console.log(data);
         const token = jsonwebtoken.sign(
             {
                 email,
@@ -26,7 +27,7 @@ module.exports = async (req, res) => {
         res.set("x-access-token", token);   
         req.session.uid = data.id;
         req.session.email = data.email;
-        return res.status(200).json({ success: true, user: data, token: token })
+        return res.status(200).json({ success: true, user: data })
     } catch (error) {
         return res.status(400).json({ error: error.message });
     } finally {
