@@ -45,3 +45,14 @@ BEGIN
     WHERE emailUser = p_emailUser;
 END //
 DELIMITER ;
+
+DELIMITER //
+
+CREATE OR REPLACE PROCEDURE get_user_Id(
+    IN p_idUser INT(3)
+)
+BEGIN
+    SELECT * FROM utilisateur
+    WHERE idUser = p_idUser;
+END //
+DELIMITER ;
