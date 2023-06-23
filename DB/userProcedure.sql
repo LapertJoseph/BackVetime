@@ -13,9 +13,8 @@ CREATE OR REPLACE PROCEDURE `login`(
     IN p_passwordUser varchar(128)
 )
 BEGIN
-    SELECT emailUser , passwordUser, isVeto, `utilisateur`.`idUser`, `cabinet`.`cabinet_id`
+    SELECT *
     FROM utilisateur
-    INNER JOIN cabinet ON `utilisateur`.`idUser` = `cabinet`.`idUser`
     WHERE emailUser = p_emailUser AND `passwordUser` = SHA2(p_passwordUser, 512); 
 END //
 DELIMITER ;
