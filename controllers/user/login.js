@@ -7,7 +7,7 @@ const Config = require("../../config/env");
 
 module.exports = async (req, res) => {
   let connection;
-  const { email, password } = req.query;
+  const { email, password } = req.body;
   try {
     connection = await pool.getConnection();
     const result = await connection.query("CALL login(?, ?);", [
